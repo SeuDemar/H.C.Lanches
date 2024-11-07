@@ -1,0 +1,104 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cor de fundo e texto */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E7E7E7;
+    color: #333;
+}
+
+/* Estilo do header */
+header {
+    background-color: #8C6ACC;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilo das seções do cardápio */
+main {
+    padding: 2rem;
+}
+
+.menu-category {
+    background-color: white;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category h2 {
+    font-size: 2rem;
+    color: #8C1C13;
+    margin-bottom: 1rem;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+/* Estilo de cada item do cardápio */
+.menu-item {
+    background-color: #F9F9F9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: #BF4342;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #735751;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8C6ACC;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #BF4342;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
