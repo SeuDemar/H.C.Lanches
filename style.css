@@ -3,24 +3,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     background-color: #ffcccc; /* Cor de fundo inicial */
-    background-image: 
-        linear-gradient(to bottom, #f5c5ffe7, #704bb5),
-        url("assets/i-like-food.svg");
+    background-image: linear-gradient(to bottom, #ffb9e5e7, #bf4342),
+      url("assets/i-like-food.svg");
     background-blend-mode: overlay;
     margin: 0;
     padding: 0;
     transition: background 0.3s ease;
-}
-
-header {
-    background-image:   
-        linear-gradient(135deg, #9d4d76, #BF4342),
-        url("assets/wiggle.svg");
+  }
+  
+  header {
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a51b1b' fill-opacity='0.16'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+      linear-gradient(135deg, #b45675, #bf4342);
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -28,91 +26,183 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-}
-/* Estilos da navegação */
-header nav ul {
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+  }
+  
+  /* Estilos da navegação */
+  header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 2rem;
     padding: 0;
     margin-top: 1rem;
-}
-
-header nav ul li a {
+  }
+  
+  header nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    background-color: #D1B3FF;
+  }
+  
+  header nav ul li a:hover {
+    background-color: #d1b3ff;
     color: #333;
-}
-
-
-/* Estilo das seções do cardápio */
-main {
+  }
+  
+  /* Estilo das seções do cardápio */
+  main {
     padding: 2rem;
-}
-
-.menu-category {
+  }
+  
+  .menu-category {
     background-color: white;
     margin-bottom: 2rem;
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-category h2 {
+  }
+  
+  .menu-category h2 {
     font-size: 2rem;
     color: #000000;
     margin-bottom: 1rem;
-}
-
-.menu-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-}
-
-/* Estilo de cada item do cardápio */
-.menu-item {
-    background-color: #F9F9F9;
+  }
+  
+  .menu-item {
+    background-color: #f9f9f9;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item h3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para o efeito de aumento */
+  }
+  
+  /* Efeito hover: aumenta o tamanho do item */
+  .menu-item:hover {
+    transform: scale(1.05); /* Aumenta o item em 5% */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumenta o destaque da sombra */
+  }
+  
+  .menu-item h3 {
     font-size: 1.5rem;
-    color: #BF4342;
-}
-
-.menu-item p {
+    color: #bf4342;
+  }
+  
+  .menu-item p {
     font-size: 1rem;
     color: #735751;
     margin-bottom: 1rem;
-}
-
-.price {
+  }
+  
+  .price {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #8C6ACC;
-}
-
-/* Estilo do footer */
-footer {
-    background-color: #411237;
+    color: #735751;
+  }
+  
+  /* Estilo do footer */
+  footer {
+    background: linear-gradient(135deg, #b45675, #bf4342);
     color: white;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Adiciona um leve destaque superior */
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+
+/* Estilos do modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1; /* Fica sobre o conteúdo da página */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semitransparente */
+    overflow: auto; /* Se o conteúdo for grande, ele poderá ser rolado */
 }
 
-footer p {
-    font-size: 1rem;
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 15px; /* Bordas arredondadas */
+    width: 85%; /* Modal um pouco mais largo */
+    max-width: 600px; /* Largura máxima para o modal */
+    
+    /* Centralização usando flexbox */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Move o modal para o centro */
+    
+    /* Sombra para o painel */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do painel que encapsula todo o conteúdo */
+.modal-content .panel {
+    background-color: #f0f0f0; /* Cor de fundo para o painel */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda sutil para o painel */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve ao redor do painel */
+}
+
+/* Cor do título (h2) dentro do modal */
+.modal-content .panel h2 {
+    color: #bf4342; /* Cor do título */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    font-size: 1.5em; /* Aumenta o tamanho do título */
+}
+
+/* Para garantir que o modal não quebre em dispositivos muito pequenos */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Largura ajustada para telas menores */
+        max-width: 100%; /* Garante que o modal ocupe toda a tela em dispositivos pequenos */
+    }
+}
+
+/* Estilo para o botão do WhatsApp */
+.whatsapp-button {
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mão para indicar que é clicável */
+    text-align: center;
+    margin-top: 20px; /* Espaço acima do botão */
+    display: inline-block;
+}
+
+/* Efeito de hover para o botão */
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo do botão de fechar (x) */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
