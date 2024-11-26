@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                             <p class="aviso">Aviso, não fazemos entrega.</p>
 
-                            <a href="https://wa.me/5511998765432?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido."
+                            <a href="https://wa.me/55449716-3853?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido."
                                target="_blank" class="whatsapp-button">
                                 Faça o pedido no WhatsApp
                             </a>
