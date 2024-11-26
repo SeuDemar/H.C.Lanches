@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Defina as categorias
-    const categorias = ["lanches", "xburguers"]; // Exemplos de categorias
+    const categorias = ["lanches", "xburguers", "bebidas"]; // Exemplos de categorias
 
     // Loop para carregar as categorias
     categorias.forEach(categoria => {
@@ -23,11 +23,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     const itemDiv = document.createElement("div");
                     itemDiv.className = "menu-item";
 
-                    itemDiv.innerHTML = `
+                    // Criar conteúdo do item
+                    let itemHTML = `
                         <h3>${item.nome}</h3>
                         <p>Ingredientes: ${item.descricao}</p>
                         <p class="price">${item.preco}</p>
                     `;
+
+                    // Se a categoria for "bebidas", ocultar ingredientes e acréscimos
+                    if (categoria === 'bebidas') {
+                        // Ocultar ingredientes e acréscimos para bebidas
+                        itemHTML = `
+                            <h3>${item.nome}</h3>
+                            <p class="price">${item.preco}</p>
+                        `;
+                    }
+
+                    // Inserir o HTML do item no container
+                    itemDiv.innerHTML = itemHTML;
 
                     // Adicionar evento de clique para abrir o modal
                     itemDiv.addEventListener("click", () => {
@@ -71,6 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         ingredientes.style.fontSize = "17px"; // Aumenta o tamanho da fonte para os ingredientes
                         aviso.style.fontSize = "17px"; // Aumenta o tamanho da fonte para o aviso
                         acrescimos.style.fontSize = "17px"; // Aumenta o tamanho da fonte para os acréscimos
+
+                        // Verificar se a categoria é 'bebidas' e ocultar ingredientes e acréscimos no modal
+                        if (categoria === 'bebidas') {
+                            ingredientes.style.display = 'none';  // Esconde os ingredientes no modal
+                            acrescimos.style.display = 'none';   // Esconde os acréscimos no modal
+                        }
 
                         // Exibir o modal
                         document.getElementById("modal").style.display = "block";

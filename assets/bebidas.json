@@ -1,0 +1,30 @@
+{
+    "bebidas": [
+        {
+            "id": 1,
+            "nome": "Coca 2 litros",
+            "preco": "R$ 14,00"
+        },
+        {
+            "id": 2,
+            "nome": "Tubaina 2 litros",
+            "preco": "R$ 9,00"
+        },
+        {
+            "id": 3,
+            "nome": "Coca 1 litro",
+            "preco": "R$ 12,00"
+        },
+        {
+            "id": 4,
+            "nome": "Coca 600 ml",
+            "preco": "R$ 7,00"
+        },
+        {
+            "id": 5,
+            "nome": "Coca lata",
+            "preco": "R$ 5,00"
+        }
+
+    ]
+}
