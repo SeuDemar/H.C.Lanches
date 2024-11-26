@@ -14,6 +14,7 @@
                 <li><a href="#lanches">Lanches</a></li>
                 <li><a href="#x-burguers">X-Burguers</a></li>
                 <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
             </ul>
         </nav>
     </header>    
@@ -23,109 +24,15 @@
         <section class="menu-category" id="lanches">
             <h2>Lanches</h2>
             <div class="menu-items">
-                <div class="menu-item" id="tradicional-item">
-                    <h3>Tradicional</h3>
-                    <p>Pão,salsicha, tomate, batata palha e molhos</p>
-                    <p class="price">R$ 09,50</p>
-                </div>
-
-                <div class="menu-item">
-                    <h3>Carne Moída</h3>
-                    <p>Pão, salsicha, carne moida, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 13,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Duplo</h3>
-                    <p>Pão, 2 salsichas, carne moida, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 14,50</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Frango</h3>
-                    <p>Pão, salsicha, frango, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 16,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Pizza</h3>
-                    <p>Pão, salsicha, presunto, mussarela, oregano tomate, alface, batata palha e molhos.</p>
-                    <p class="price">R$ 16,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Calabresa</h3>
-                    <p>Pão, salsicha, calabresa, tomate, alface, batata palha e molhos.</p>
-                    <p class="price">R$ 16,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Duplo de Frango</h3>
-                    <p>Pão, 2 salsichas, frango, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 17,50</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Duplo de pizza</h3>
-                    <p>Pão, 2 salsichas, presunto, mussarela, oregano tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 17,50</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Duplo de calabresa</h3>
-                    <p>Pão, 2 salsichas, calabresa, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 17,50</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Bacon</h3>
-                    <p>Pão, salsicha, bacon, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 18,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Duplo com Bacon</h3>
-                    <p>Pão, 2 salsichas, bacon, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 20,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Bifanas</h3>
-                    <p>Pão, salsicha, carne picada, cebola, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 20,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Charque / Carne de Sol</h3>
-                    <p>Pão, salsicha, charque, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 20,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Frango c/ catupiry</h3>
-                    <p>Pão, salsicha, frango, catupiry, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 18,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Carne e Cheddar</h3>
-                    <p>Pão, salsicha, frango, cheddar, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 18,00</p>
-                </div>
-                <div class="menu-item">
-                    <h3>Paradão</h3>
-                    <p>Combo de 2 lanches com 2 salsichas, bacon, calabresa, frango, hamburguer, presunto, mussarela, ovos, tomate, alface, batata palha e molhos</p>
-                    <p class="price">R$ 40,00</p>
-                </div>
+                <div id="menu-container" class="menu-items"></div>
             </div>
         </section>
-
-        <div id="modal-tradicional" class="modal">
-            <div class="modal-content">
-                <span class="close" id="close-tradicional">&times;</span>
-                
-                <!-- Painel para encapsular todo o conteúdo do lanche tradicional -->
-                <div class="panel">
-                    <h2>Detalhes do Lanche Tradicional</h2>
-                    <p>Ingredientes: Pão, carne bovina, alface, queijo, molho especial.</p>
-                    <br>
-                    <p>Aviso! Não fazemos entrega.</p>
         
-                    <!-- Botão que redireciona para o WhatsApp -->
-                    <a href="https://wa.me/554497163853" target="_blank">
-                        <button class="whatsapp-button">Fale Conosco no WhatsApp</button>
-                    </a>
-                </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <!-- O conteúdo do modal será gerado dinamicamente via JavaScript -->
             </div>
-        </div>        
-
+        </div>
         <!-- X-Burguers -->
         <section class="menu-category" id="x-burguers">
             <h2>X-Burguers</h2>
@@ -182,12 +89,15 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
         <p>&copy; 2024 H.C Lanches. Todos os direitos reservados.</p>
     </footer>
+
     <script src="script.js"></script>
+    
 </body>
 </html>
 
