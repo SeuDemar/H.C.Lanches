@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background-color: #ffcccc; /* Cor de fundo inicial */
   background-image: linear-gradient(to bottom, #ffb9e5e7, #bf4342),
     url("assets/i-like-food.svg");
@@ -31,6 +31,7 @@ header {
 }
 
 /* Estilos da navegação */
+/* Estilo geral para a navegação */
 header nav ul {
   list-style: none;
   display: flex;
@@ -40,6 +41,7 @@ header nav ul {
   margin-top: 1rem;
 }
 
+/* Estilos dos links de navegação */
 header nav ul li a {
   text-decoration: none;
   color: white;
@@ -49,9 +51,26 @@ header nav ul li a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Efeito hover para os links */
 header nav ul li a:hover {
   background-color: #d1b3ff;
   color: #333;
+}
+
+/* Responsividade: Quando a tela for menor que 768px, reorganiza os itens de navegação em duas colunas */
+@media (max-width: 768px) {
+  header nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas */
+    gap: 1rem; /* Ajusta o espaço entre os itens */
+    padding: 0;
+    justify-items: center; /* Centraliza os itens nas colunas */
+  }
+
+  header nav ul li a {
+    padding: 1rem; /* Ajuste para maior espaçamento */
+    text-align: center; /* Centraliza o texto */
+  }
 }
 
 /* Estilo das seções do cardápio */
@@ -68,6 +87,25 @@ main {
   width: 87%;
   margin: 0 auto;
   border: 2px solid #f0f0f0; /* Contorno sutil ao redor da categoria */
+}
+.menu-wrapper {
+  background-color: #ffffff; /* Fundo branco para destacar */
+  padding: 1.0rem; /* Espaçamento interno */
+  border-radius: 8px; /* Borda arredondada */
+  border: 2px solid #e0e0e0; /* Contorno cinza claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin: 0.2rem auto; /* Espaçamento externo reduzido */
+  width: 100%; /* Ajusta a largura para deixar uma margem mínima */
+}
+
+#contatos .menu-wrapper {
+  background-color: #ffffff; /* Fundo branco para destacar */
+  padding: 1.0rem; /* Espaçamento interno */
+  border-radius: 8px; /* Borda arredondada */
+  border: 2px solid #e0e0e0; /* Contorno cinza claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin: 0.2rem auto; /* Espaçamento externo reduzido */
+  width: 100%; /* Ajusta a largura para deixar uma margem mínima */
 }
 
 @media (max-width: 768px) {
@@ -234,7 +272,14 @@ header.transparent {
   width: 100%;
   max-width: 350px;
   text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
 }
+
+.whatsapp-button:hover {
+  background-color: #128C7E; /* Cor mais escura para o hover */
+  transform: scale(1.05); /* Leve aumento de tamanho */
+}
+
 
 .modal-content {
   display: flex;
@@ -243,3 +288,61 @@ header.transparent {
   justify-content: center;
   text-align: center;
 }
+
+/* Mapa padrão, tamanho maior para computadores */
+#google-map iframe {
+  width: 100%;
+  height: 650px;  /* Tamanho maior para telas de computador */
+}
+
+/* Mapa para dispositivos móveis */
+@media (max-width: 768px) {
+  #google-map iframe {
+      width: 100%;
+      height: 350px;  /* Tamanho menor para telas de celular */
+  }
+}
+
+/* Estilização da seção de fotos */
+/* Estilização da seção de fotos */
+/* Estilização da seção de fotos */
+#fotos {
+  text-align: center; /* Centraliza o título */
+  padding: 2rem 1rem; /* Espaçamento interno */
+  background-color: #f9f9f9; /* Fundo claro */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin: 2rem auto; /* Centraliza a seção */
+  max-width: 1200px; /* Limita a largura máxima */
+}
+
+/* Título da seção */
+#fotos h2 {
+  font-size: 2rem; /* Tamanho do título */
+  color: #333; /* Cor do texto */
+  margin-bottom: 1.5rem; /* Espaçamento abaixo do título */
+}
+
+/* Container para organizar as imagens */
+#fotos .photo-container {
+  display: grid; /* Usa grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas responsivas */
+  gap: 1.5rem; /* Espaçamento entre as fotos */
+  justify-content: center; /* Centraliza as colunas */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilização das imagens */
+#fotos img {
+  width: 100%; /* Imagem ocupa 100% da coluna */
+  height: auto; /* Mantém a proporção */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito hover */
+}
+
+#fotos img:hover {
+  transform: scale(1.05); /* Ampliação sutil ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Realça a sombra */
+}
+
